@@ -105,18 +105,12 @@ TANGINA ANO BANG PINAGLALABAN KO
     
   </div>
   <script>
-  function OpenLetter() {
-    // Show the headline text
-    document.getElementById('headline').style.display = 'block';
-
-    // Animate the envelope
-    document.querySelector('.envelope').style.transform = 'translateY(-300px)';
-
-    // Hide the letter after 0.8s
-    setTimeout(() => {
-      document.getElementById('letter').style.display = 'none';
-    }, 800);
-  }
+    function openLetter() {
+      document.querySelector('.envelope').style.transform = 'translateY(-300px)';
+      setTimeout(() => {
+        document.getElementById('letter').style.display = 'block';
+      }, 800);
+    }
   </script>
 </body>
 </html>
