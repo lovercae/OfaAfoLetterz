@@ -62,14 +62,11 @@
      }
   </style>
 </head>
-  <div id="displayText" class="display-text">
-  Tap the envelope to open your surprise!
-  </div>
 <body>
-  <h1 style="font-size: x-small; color: #374375; font-family: 'Times New Romans', serif;">
-  mysha has a letter 4 u, roger
+  <h1 id="headline" style="font-size: x-small; color: #374375; font-family: 'Times New Romans', serif;">
+  mysha has a letter 4 u, roger!
   </h1>
-  <div class="envelope" onclick="openLetter()"></div>
+  <div class="envelope" onclick="OpenLetter()"></div>
   <div class="letter" id="letter">
     To my dear Roger 💌,
 
@@ -103,15 +100,22 @@ TANGINA ANO BANG PINAGLALABAN KO
 (lagi naman nananakot ang mga tao kesyo recitation, the index card—hmm kahit pa sa elem meron na nyan. mga patawa. ang research naman, diyan palang tayo matututo sa shs, hindi yung “dapat bago ka mag senior high alam mo na—” “mga bagay na dapat mong malaman sa shs—” not all your statement/content ay )
     Yours truly,
     Someone who cares.
-  </div>
 
+    
+  </div>
   <script>
-    function openLetter() {
-      document.querySelector('.envelope').style.transform = 'translateY(-300px)';
-      setTimeout(() => {
-        document.getElementById('letter').style.display = 'block';
-      }, 800);
-    }
+  function OpenLetter() {
+    // Hide the headline text
+    document.getElementById('headline').style.display = 'none';
+
+    // Animate the envelope
+    document.querySelector('.envelope').style.transform = 'translateY(-300px)';
+
+    // Show the letter after 0.8s
+    setTimeout(() => {
+      document.getElementById('letter').style.display = 'block';
+    }, 800);
+  }
   </script>
 </body>
 </html>
